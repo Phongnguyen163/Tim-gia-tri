@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1 id="bd"></h1>
+<input type="text" placeholder="Nhap gia tri can tim: " id="ip">
+<button onclick="Find()">Tim Kiem</button>
+<h1 id="show"></h1>
+<script>
+    let numbers = [-3, 5, 1, 3, 2, 10];
+    document.getElementById('bd').innerHTML = "Mang ban dau: " + numbers;
+    function Find() {
+        let value = document.getElementById('ip').value;
+        for (let i = 0; i < numbers.length; i++) {
+            if (value == numbers[i]) {
+                document.getElementById('show').innerHTML= "Value " + numbers[i] + " found at " + i;
+            }
+        }
+    }
+</script>
+</body>
+</html>
